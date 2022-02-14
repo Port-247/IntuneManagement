@@ -1,0 +1,202 @@
+﻿{
+    "devicehealth_complianceandroidforwork":  [
+                                                  {
+                                                      "dataType":  0,
+                                                      "category":  36,
+                                                      "nameResourceKey":  "complianceRootedAllowedName",
+                                                      "descriptionResourceKey":  "complianceRootedAllowedDescription",
+                                                      "childSettings":  [
+
+                                                                        ],
+                                                      "options":  [
+
+                                                                  ],
+                                                      "entityKey":  "securityBlockJailbrokenDevices",
+                                                      "booleanActions":  3,
+                                                      "defaultValue":  false,
+                                                      "policyType":  30,
+                                                      "enabled":  true
+                                                  },
+                                                  {
+                                                      "dataType":  16,
+                                                      "category":  36,
+                                                      "nameResourceKey":  "complianceDeviceThreatProtectionRequirementName",
+                                                      "descriptionResourceKey":  "complianceDeviceThreatProtectionRequirementDescription",
+                                                      "childSettings":  [
+
+                                                                        ],
+                                                      "options":  [
+                                                                      {
+                                                                          "nameResourceKey":  "notConfigured",
+                                                                          "value":  "unavailable",
+                                                                          "enabled":  true
+                                                                      },
+                                                                      {
+                                                                          "nameResourceKey":  "secured",
+                                                                          "value":  "secured",
+                                                                          "enabled":  true
+                                                                      },
+                                                                      {
+                                                                          "nameResourceKey":  "lowOption",
+                                                                          "value":  "low",
+                                                                          "enabled":  true
+                                                                      },
+                                                                      {
+                                                                          "nameResourceKey":  "mediumOption",
+                                                                          "value":  "medium",
+                                                                          "enabled":  true
+                                                                      },
+                                                                      {
+                                                                          "nameResourceKey":  "highOption",
+                                                                          "value":  "high",
+                                                                          "enabled":  true
+                                                                      }
+                                                                  ],
+                                                      "entityKey":  "deviceThreatProtectionRequiredSecurityLevel",
+                                                      "booleanActions":  0,
+                                                      "defaultValue":  "unavailable",
+                                                      "unconfiguredValue":  "unavailable",
+                                                      "policyType":  30,
+                                                      "enabled":  true
+                                                  },
+                                                  {
+                                                      "isSettingDescription":  false,
+                                                      "showAsSectionHeader":  false,
+                                                      "dataType":  8,
+                                                      "category":  36,
+                                                      "nameResourceKey":  "googlePlayProtectHeader",
+                                                      "childSettings":  [
+                                                                            {
+                                                                                "dataType":  0,
+                                                                                "category":  36,
+                                                                                "nameResourceKey":  "requireGooglePlayServicesName",
+                                                                                "descriptionResourceKey":  "requireGooglePlayServicesDescription",
+                                                                                "childSettings":  [
+
+                                                                                                  ],
+                                                                                "options":  [
+
+                                                                                            ],
+                                                                                "entityKey":  "securityRequireGooglePlayServices",
+                                                                                "booleanActions":  1,
+                                                                                "defaultValue":  false,
+                                                                                "policyType":  30,
+                                                                                "enabled":  true
+                                                                            },
+                                                                            {
+                                                                                "dataType":  0,
+                                                                                "category":  36,
+                                                                                "nameResourceKey":  "requireUpToDateSecurityProvidersName",
+                                                                                "descriptionResourceKey":  "requireUpToDateSecurityProvidersDescription",
+                                                                                "childSettings":  [
+
+                                                                                                  ],
+                                                                                "options":  [
+
+                                                                                            ],
+                                                                                "entityKey":  "securityRequireUpToDateSecurityProviders",
+                                                                                "booleanActions":  1,
+                                                                                "defaultValue":  false,
+                                                                                "policyType":  30,
+                                                                                "enabled":  true
+                                                                            },
+                                                                            {
+                                                                                "dataType":  16,
+                                                                                "category":  36,
+                                                                                "nameResourceKey":  "safetyNetAttestationOptionsName",
+                                                                                "descriptionResourceKey":  "safetyNetAttestationOptionsDescription",
+                                                                                "childSettings":  [
+
+                                                                                                  ],
+                                                                                "options":  [
+                                                                                                {
+                                                                                                    "nameResourceKey":  "notConfigured",
+                                                                                                    "value":  "notConfigured",
+                                                                                                    "enabled":  true
+                                                                                                },
+                                                                                                {
+                                                                                                    "nameResourceKey":  "androidSafetyNetbasicIntegrity",
+                                                                                                    "value":  "basicIntegrity",
+                                                                                                    "children":  [
+                                                                                                                     {
+                                                                                                                         "dataType":  16,
+                                                                                                                         "category":  36,
+                                                                                                                         "nameResourceKey":  "requiredAndroidSafetyNetEvaluationTypeName",
+                                                                                                                         "descriptionResourceKey":  "requiredAndroidSafetyNetEvaluationTypeDescription",
+                                                                                                                         "childSettings":  [
+
+                                                                                                                                           ],
+                                                                                                                         "options":  [
+                                                                                                                                         {
+                                                                                                                                             "nameResourceKey":  "requiredAndroidSafetyNetEvaluationTypeBasic",
+                                                                                                                                             "value":  "basic",
+                                                                                                                                             "enabled":  true
+                                                                                                                                         },
+                                                                                                                                         {
+                                                                                                                                             "nameResourceKey":  "requiredAndroidSafetyNetEvaluationTypeHardwareBacked",
+                                                                                                                                             "value":  "hardwareBacked",
+                                                                                                                                             "enabled":  true
+                                                                                                                                         }
+                                                                                                                                     ],
+                                                                                                                         "entityKey":  "securityRequiredAndroidSafetyNetEvaluationType",
+                                                                                                                         "booleanActions":  0,
+                                                                                                                         "defaultValue":  "basic",
+                                                                                                                         "unconfiguredValue":  "basic",
+                                                                                                                         "policyType":  30,
+                                                                                                                         "enabled":  false
+                                                                                                                     }
+                                                                                                                 ],
+                                                                                                    "enabled":  true
+                                                                                                },
+                                                                                                {
+                                                                                                    "nameResourceKey":  "androidSafetyNetBasicIntegrityAndCertified",
+                                                                                                    "value":  "basicIntegrityAndCertified",
+                                                                                                    "children":  [
+                                                                                                                     {
+                                                                                                                         "dataType":  16,
+                                                                                                                         "category":  36,
+                                                                                                                         "nameResourceKey":  "requiredAndroidSafetyNetEvaluationTypeName",
+                                                                                                                         "descriptionResourceKey":  "requiredAndroidSafetyNetEvaluationTypeDescription",
+                                                                                                                         "childSettings":  [
+
+                                                                                                                                           ],
+                                                                                                                         "options":  [
+                                                                                                                                         {
+                                                                                                                                             "nameResourceKey":  "requiredAndroidSafetyNetEvaluationTypeBasic",
+                                                                                                                                             "value":  "basic",
+                                                                                                                                             "enabled":  true
+                                                                                                                                         },
+                                                                                                                                         {
+                                                                                                                                             "nameResourceKey":  "requiredAndroidSafetyNetEvaluationTypeHardwareBacked",
+                                                                                                                                             "value":  "hardwareBacked",
+                                                                                                                                             "enabled":  true
+                                                                                                                                         }
+                                                                                                                                     ],
+                                                                                                                         "entityKey":  "securityRequiredAndroidSafetyNetEvaluationType",
+                                                                                                                         "booleanActions":  0,
+                                                                                                                         "defaultValue":  "basic",
+                                                                                                                         "unconfiguredValue":  "basic",
+                                                                                                                         "policyType":  30,
+                                                                                                                         "enabled":  false
+                                                                                                                     }
+                                                                                                                 ],
+                                                                                                    "enabled":  true
+                                                                                                }
+                                                                                            ],
+                                                                                "entityKey":  "androidSafetyNetAttestationOptions",
+                                                                                "booleanActions":  0,
+                                                                                "defaultValue":  "notConfigured",
+                                                                                "unconfiguredValue":  "notConfigured",
+                                                                                "policyType":  30,
+                                                                                "enabled":  true
+                                                                            }
+                                                                        ],
+                                                      "options":  [
+
+                                                                  ],
+                                                      "booleanActions":  0,
+                                                      "policyType":  30,
+                                                      "enabled":  true
+                                                  }
+                                              ]
+}

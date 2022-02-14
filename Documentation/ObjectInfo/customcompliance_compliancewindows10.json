@@ -1,0 +1,15 @@
+﻿{
+    "customcompliance_compliancewindows10":  {
+                                                 "dataType":  25,
+                                                 "category":  143,
+                                                 "childSettings":  [
+
+                                                                   ],
+                                                 "options":  [
+
+                                                             ],
+                                                 "booleanActions":  0,
+                                                 "policyType":  35,
+                                                 "enabled":  true
+                                             }
+}

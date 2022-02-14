@@ -1,0 +1,7 @@
+.vs/
+.vscode/
+.git/
+/*.Log
+/*.Lo_
+/*.csv
+

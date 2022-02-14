@@ -1,0 +1,182 @@
+<Grid xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="Auto" SharedSizeGroup="TitleColumn" />
+        <ColumnDefinition Width="*"/>
+    </Grid.ColumnDefinitions>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="0">
+        <Label Content="Output Properties" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Specify the output type. Simple will only add Value and Name for Settings. Extended will output the same as Raw Output. Use Custom to select custom properties" />
+    </StackPanel>
+    <ComboBox Name="cbWordDocumentationProperties" Margin="0,5,0,0" MinWidth="250" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left"
+            DisplayMemberPath="Name" SelectedValuePath="Value" />
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="1" Name="spWordCustomProperties">
+        <Label Content="Custom Properties" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Comma separated list with properties to export. The properties must match with values from Raw Data" />
+    </StackPanel>
+    <TextBox Text="" Name="txtWordCustomProperties" Margin="0,5,5,5" Grid.Row="1" Grid.Column="1"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,0,5,0" Grid.Row="2">
+        <Label Content="Word document template" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="The document template (*.dotx) file to use for the documentation. Normal.dotx will be used if this is empty" />
+    </StackPanel>
+    <Grid Grid.Column='1' Grid.Row='2' Margin="0,5,5,0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />  
+            <ColumnDefinition Width="5" />                              
+            <ColumnDefinition Width="Auto" />                                
+        </Grid.ColumnDefinitions>                 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>                
+        </Grid.RowDefinitions>
+        <TextBox Text="" Name="txtWordDocumentTemplate" />
+        <Button Grid.Column="2" Name="browseWordDocumentTemplate" Padding="5,0,5,0" Width="50" ToolTip="Browse for template file">...</Button>
+    </Grid>
+
+    <StackPanel Orientation="Horizontal" Grid.Row='3' Margin="0,0,5,0">
+        <Label Content="Document name" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Default value is %MyDocuments%\%Organization%-%Date%.docx. Special folders and environmentvariables can be used" />
+    </StackPanel>
+    <Grid Grid.Column='1' Grid.Row='3' Margin="0,5,5,0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />  
+            <ColumnDefinition Width="5" />                              
+            <ColumnDefinition Width="Auto" />                                
+        </Grid.ColumnDefinitions>                 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>                
+        </Grid.RowDefinitions>
+        <TextBox Text="" Name="txtWordDocumentName" />
+        <Button Grid.Column="2" Name="browseWordDocumentName" Padding="5,0,5,0" Width="50" ToolTip="Select output document">...</Button>
+    </Grid>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="5">
+        <Label Content="Include Categories" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Add categories when available for objects" />
+    </StackPanel>
+    <CheckBox Grid.Column='1' Grid.Row='5' Name='chkWordAddCategories' VerticalAlignment="Center" IsChecked="true" />            
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="6">
+        <Label Content="Include Sub-categories" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Add sub-categories when available for objects" />
+    </StackPanel>
+    <CheckBox Grid.Column='1' Grid.Row='6' Name='chkWordAddSubCategories' VerticalAlignment="Center" IsChecked="true" />
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="7">
+        <Label Content="Header 1 style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Style for Header 1" />
+    </StackPanel>
+    <TextBox Grid.Column='1' Grid.Row='7' Name='txtWordHeader1Style' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="8">
+        <Label Content="Header 2 style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Style for Header 2" />
+    </StackPanel>
+    <TextBox Grid.Column='2' Grid.Row='8' Name='txtWordHeader2Style' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="9">
+        <Label Content="Table style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Style for Tables" />
+    </StackPanel>
+    <TextBox Grid.Column='2' Grid.Row='9' Name='txtWordTableStyle' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="10">
+        <Label Content="Table header row style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Style of the Table header row. Default is Font size increased by 2" />
+    </StackPanel>
+    <TextBox Grid.Column='2' Grid.Row='10' Name='txtWordTableHeaderStyle' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="11">
+        <Label Content="Table Category header row style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Style of the Table Category row. Default is Font size increased by 2 + Italic" />
+    </StackPanel>
+    <TextBox Grid.Column='2' Grid.Row='11' Name='txtWordCategoryHeaderStyle' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="12">
+        <Label Content="Table Sub-Category header row style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Style of the Table Sub-Category row. Default is current font + Italic" />
+    </StackPanel>
+    <TextBox Grid.Column='2' Grid.Row='12' Name='txtWordSubCategoryHeaderStyle' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="13">
+        <Label Content="Cover Page" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Cover page to use if the template property is not specified. Ion (Dark) is used if not specified" />
+    </StackPanel>
+    <TextBox Grid.Column='1' Grid.Row='13' Name='txtWordCoverPage' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="14">
+        <Label Content="Title" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Specify the title property for the document" />
+    </StackPanel>
+    <TextBox Grid.Column='1' Grid.Row='14' Name='txtWordTitleProperty' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="15">
+        <Label Content="Subject" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Specify the subject property for the document" />
+    </StackPanel>
+    <TextBox Grid.Column='1' Grid.Row='15' Name='txtWordSubjectProperty' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="16">
+        <Label Content="Content controls" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Specify content control values e.g. prop1=value;prop2=value;prop3=value" />
+    </StackPanel>
+    <TextBox Grid.Column='1' Grid.Row='16' Name='txtWordContentControls' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Grid.Row='17' Margin="0,0,5,0">
+        <Label Content="Open document" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="This will open the document and activate Word when finished" />
+    </StackPanel>
+    <CheckBox Grid.Column='1' Grid.Row='17' Name='chkWordOpenDocument' VerticalAlignment="Center" IsChecked="true" />
+
+    <StackPanel Orientation="Horizontal" Grid.Row='18' Margin="0,0,5,0">
+        <Label Content="Document scripts" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Include scripts in the documentation" />
+    </StackPanel>
+    <CheckBox Grid.Column='1' Grid.Row='18' Name='chkWordIncludeScripts' VerticalAlignment="Center" IsChecked="true" />    
+
+    <StackPanel Orientation="Horizontal" Grid.Row='19' Margin="0,0,5,0">
+        <Label Content="Remove script signature" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Remove signature block from PowerShell scripts to reduce script documentation size" />
+    </StackPanel>
+    <CheckBox Grid.Column='1' Grid.Row='19' Name='chkWordExcludeScriptSignature' VerticalAlignment="Center" IsChecked="true" />    
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="21">
+        <Label Content="Script table style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Specify the table style to use for scripts. Ducument table style will be use as default" />
+    </StackPanel>
+    <TextBox Grid.Column='1' Grid.Row='21' Name='txtWordScriptTableStyle' Margin="0,5,5,5"/>
+
+    <StackPanel Orientation="Horizontal" Margin="0,5,5,0" Grid.Row="22">
+        <Label Content="Script font style" />
+        <Rectangle Style="{DynamicResource InfoIcon}" ToolTip="Specify the font style to use for documenting scripts. HTML Code is used as default" />
+    </StackPanel>
+    <TextBox Grid.Column='1' Grid.Row='22' Name='txtWordScriptStyle' Margin="0,5,5,5"/>
+
+</Grid>
